@@ -1,59 +1,31 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TutorVistaar | Home & Online Tuition</title>
-<meta name="description" content="TutorVistaar connects parents with home and online tutors for Nursery to Class 12. CBSE, ICSE, UP Board and other boards.">
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#172033;background:#f7f9fc}
-header{background:#fff;border-bottom:1px solid #e7eaf0;position:sticky;top:0;z-index:5}.nav{max-width:1100px;margin:auto;padding:15px 20px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:25px;font-weight:800;color:#165dff}.logo span{color:#172033}.nav a{text-decoration:none;color:#172033;margin-left:20px;font-weight:600}
-.hero{background:linear-gradient(135deg,#eef4ff,#fff);padding:70px 20px}.wrap{max-width:1100px;margin:auto}.hero h1{font-size:48px;line-height:1.08;margin:0 0 15px}.hero p{font-size:19px;color:#5c667a;max-width:650px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0}.btn{display:inline-block;padding:14px 22px;border-radius:10px;text-decoration:none;font-weight:700;border:0;cursor:pointer}.primary{background:#165dff;color:#fff}.secondary{background:#fff;color:#165dff;border:1px solid #165dff}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:35px}.card{background:#fff;padding:25px;border-radius:16px;box-shadow:0 8px 30px #18264a0d}.card h3{margin-top:0}
-section{padding:55px 20px}.title{text-align:center;font-size:32px;margin:0 0 10px}.sub{text-align:center;color:#687386;margin:0 auto 30px;max-width:700px}
-.features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.feature{text-align:center;background:#fff;padding:22px;border-radius:14px}.icon{font-size:32px}
-form{background:#fff;padding:25px;border-radius:16px;box-shadow:0 8px 30px #18264a0d;max-width:720px;margin:auto}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{font-weight:700;font-size:14px;display:block;margin:12px 0 6px}input,select,textarea{width:100%;padding:12px;border:1px solid #d9deea;border-radius:9px;font-size:15px}textarea{min-height:90px}
-.note{font-size:13px;color:#6c7484;margin-top:12px}footer{background:#121a2b;color:#fff;padding:35px 20px}.contact{display:flex;gap:20px;flex-wrap:wrap}.contact a{color:#fff}
-@media(max-width:750px){.hero h1{font-size:36px}.features{grid-template-columns:1fr 1fr}.grid,.row{grid-template-columns:1fr}.nav a{display:none}}
-</style>
-</head>
-<body>
-<header><div class="nav"><div class="logo">TutorVistaar <span>India</span></div><nav><a href="#find">Find Tutor</a><a href="#teacher">Join as Teacher</a><a href="#contact">Contact</a></nav></div></header>
+<form action="https://wa.me/919336871629" method="get"><form id="studentForm"><form action="https://wa.me/919336871629" method="get"><form id="teacherForm"><script>
+const whatsappNumber = "919336871629";
 
-<main>
-<section class="hero"><div class="wrap">
-<h1>Har Bacche Ko<br><span style="color:#165dff">Sahi Teacher.</span></h1>
-<p>TutorVistaar helps parents find suitable <b>Home Tuition & Online Tuition</b> teachers from Nursery to Class 12.</p>
-<div class="buttons"><a class="btn primary" href="#find">🏠 Find a Home Tutor</a><a class="btn secondary" href="#find">💻 Find an Online Tutor</a></div>
-<p><b>Classes:</b> Nursery–12th &nbsp; | &nbsp; <b>Boards:</b> CBSE, ICSE, UP Board & more</p>
-</div></section>
+function sendToWhatsApp(formId, title) {
+  const form = document.getElementById(formId);
 
-<section><div class="wrap"><h2 class="title">Why TutorVistaar?</h2><p class="sub">A simple way for parents to share their requirement and get connected with a suitable tutor.</p>
-<div class="features"><div class="feature"><div class="icon">🏠</div><b>Home Tuition</b><p>Local tutors at your preferred location.</p></div><div class="feature"><div class="icon">💻</div><b>Online Tuition</b><p>Learn from teachers from anywhere.</p></div><div class="feature"><div class="icon">📚</div><b>Nursery–12th</b><p>School subjects for all major classes.</p></div><div class="feature"><div class="icon">🤝</div><b>Tutor Matching</b><p>We contact you and discuss your requirement.</p></div></div></div></section>
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-<section id="find"><div class="wrap"><h2 class="title">Find a Tutor</h2><p class="sub">Parent/student requirement submit karein. We will contact you.</p>
-<form action="https://wa.me/919336871629" method="get">
-<div class="row"><div><label>Parent Name</label><input name="name" required></div><div><label>Mobile Number</label><input name="mobile" type="tel" required></div></div>
-<div class="row"><div><label>Class</label><select name="class"><option>Nursery</option><option>LKG</option><option>UKG</option><option>Class 1–5</option><option>Class 6–8</option><option>Class 9–10</option><option>Class 11–12</option></select></div><div><label>Tuition Type</label><select name="type"><option>Home Tuition</option><option>Online Tuition</option></select></div></div>
-<div class="row"><div><label>Subject</label><input name="subject" placeholder="e.g. Maths"></div><div><label>Board</label><select name="board"><option>CBSE</option><option>ICSE</option><option>UP Board</option><option>Other</option></select></div></div>
-<label>City / Area (for Home Tuition)</label><input name="location" placeholder="City, area, locality">
-<label>Requirement</label><textarea name="message" placeholder="Teacher preference, timing, budget etc."></textarea>
-<br><button class="btn primary" type="submit">Submit Requirement on WhatsApp</button>
-<p class="note">WhatsApp: 9336871629. Please do not share sensitive documents in this form.</p>
-</form></div></section>
+    const data = new FormData(form);
+    let message = `*${title}*\n\n`;
 
-<section id="teacher" style="background:#eef4ff"><div class="wrap"><h2 class="title">Are You a Teacher?</h2><p class="sub">TutorVistaar ke saath register karke students ke requirements ke liye apni teaching profile submit karein.</p>
-<form action="https://wa.me/919336871629" method="get">
-<div class="row"><div><label>Teacher Name</label><input name="teacher_name" required></div><div><label>Mobile</label><input name="teacher_mobile" type="tel" required></div></div>
-<div class="row"><div><label>Qualification</label><input name="qualification"></div><div><label>Experience</label><input name="experience"></div></div>
-<label>Subjects / Classes</label><input name="subjects" placeholder="e.g. Maths, Class 9–12">
-<label>Location</label><input name="teacher_location">
-<label>Preference</label><select name="preference"><option>Home Tuition</option><option>Online Tuition</option><option>Both</option></select>
-<br><button class="btn primary" type="submit">Register as Tutor on WhatsApp</button>
-</form></div></section>
-</main>
+    for (const [key, value] of data.entries()) {
+      if (value.trim() !== "") {
+        message += `*${key}:* ${value}\n`;
+      }
+    }
 
-<footer id="contact"><div class="wrap"><h2>TutorVistaar</h2><p>Har Bacche Ko Sahi Teacher.</p><div class="contact"><span>📞 <a href="tel:+919580712072">9580712072</a></span><span>💬 <a href="https://wa.me/919336871629">WhatsApp: 9336871629</a></span></div><p style="color:#aab3c5;font-size:13px;margin-top:25px">Home & Online Tuition | Nursery to Class 12</p></div></footer>
-</body></html>
+    const url =
+      "https://wa.me/" +
+      whatsappNumber +
+      "?text=" +
+      encodeURIComponent(message);
+
+    window.open(url, "_blank");
+  });
+}
+
+sendToWhatsApp("studentForm", "TutorVistaar - New Student Requirement");
+sendToWhatsApp("teacherForm", "TutorVistaar - New Teacher Registration");
+</script>
