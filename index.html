@@ -29,3 +29,116 @@ function sendToWhatsApp(formId, title) {
 sendToWhatsApp("studentForm", "TutorVistaar - New Student Requirement");
 sendToWhatsApp("teacherForm", "TutorVistaar - New Teacher Registration");
 </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TutorVistaar India | Find Tutors & Teaching Opportunities</title>
+  <meta name="description" content="TutorVistaar India connects students with tutors and teachers with teaching opportunities. Submit your requirement through WhatsApp.">
+  <meta name="keywords" content="TutorVistaar India, home tutor, online tutor, teacher registration, find tutor, tuition">
+
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
+    header{background:#1769e0;color:white;text-align:center;padding:28px 15px}
+    header h1{margin:0;font-size:32px}
+    header p{margin:8px 0 0;font-size:16px}
+    .container{max-width:850px;margin:25px auto;padding:0 15px}
+    .card{background:white;padding:24px;margin-bottom:20px;border-radius:16px;box-shadow:0 4px 18px #00000012}
+    h2{margin-top:0;color:#1769e0}
+    input,select,textarea{width:100%;padding:13px;margin:7px 0 12px;border:1px solid #d5dce8;border-radius:9px;font-size:15px}
+    textarea{min-height:90px;resize:vertical}
+    button{width:100%;padding:14px;border:0;border-radius:9px;background:#20b858;color:white;font-size:16px;font-weight:bold;cursor:pointer}
+    .teacher button{background:#1769e0}
+    footer{text-align:center;padding:25px;color:#687386;font-size:14px}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🎓 TutorVistaar-India</h1>
+  <p>Students aur Teachers ko connect karne ka simple platform</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>📚 Find a Tutor</h2>
+    <p>Apni tuition requirement bhariye. Details WhatsApp par bheji jayengi.</p>
+
+    <form id="studentForm">
+      <input name="Student Name" placeholder="Student Name" required>
+      <input name="Parent Name" placeholder="Parent Name">
+      <input name="Class" placeholder="Class / Grade" required>
+      <input name="Subject" placeholder="Subject Required" required>
+      <input name="Location" placeholder="City / Area" required>
+      <select name="Mode">
+        <option value="">Select Teaching Mode</option>
+        <option>Offline</option>
+        <option>Online</option>
+        <option>Both</option>
+      </select>
+      <textarea name="Requirement" placeholder="Tell us about your requirement"></textarea>
+      <button type="submit">📲 Send Student Requirement</button>
+    </form>
+  </div>
+
+  <div class="card teacher">
+    <h2>👨‍🏫 Teacher Registration</h2>
+    <p>Teaching opportunity ke liye apni basic details submit karein.</p>
+
+    <form id="teacherForm">
+      <input name="Teacher Name" placeholder="Full Name" required>
+      <input name="Qualification" placeholder="Qualification" required>
+      <input name="Subjects" placeholder="Subjects You Teach" required>
+      <input name="Experience" placeholder="Teaching Experience">
+      <input name="Location" placeholder="City / Area" required>
+      <select name="Mode">
+        <option value="">Preferred Teaching Mode</option>
+        <option>Offline</option>
+        <option>Online</option>
+        <option>Both</option>
+      </select>
+      <textarea name="About" placeholder="Tell us about yourself"></textarea>
+      <button type="submit">📲 Register as Teacher</button>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 TutorVistaar-India | Connecting Students & Teachers
+</footer>
+
+<script>
+const whatsappNumber = "919336871629";
+
+function sendToWhatsApp(formId, title) {
+  const form = document.getElementById(formId);
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    let message = `*${title}*%0A%0A`;
+
+    for (const [key, value] of data.entries()) {
+      if (String(value).trim() !== "") {
+        message += `*${key}:* ${value}%0A`;
+      }
+    }
+
+    const url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+    window.open(url, "_blank");
+  });
+}
+
+sendToWhatsApp("studentForm", "TutorVistaar - New Student Requirement");
+sendToWhatsApp("teacherForm", "TutorVistaar - New Teacher Registration");
+</script>
+
+</body>
+</html>
