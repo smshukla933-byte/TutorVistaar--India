@@ -5,23 +5,168 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>TutorVistaar India | Find Tutors & Teaching Opportunities</title>
-  <meta name="description" content="TutorVistaar India connects students with tutors and teachers with teaching opportunities. Submit your requirement through WhatsApp.">
-  <meta name="keywords" content="TutorVistaar India, home tutor, online tutor, teacher registration, find tutor, tuition">
+
+  <meta name="description" content="TutorVistaar India helps students find tutors and teachers connect with teaching opportunities. Submit your tuition requirement or register as a teacher.">
+
+  <meta name="keywords" content="TutorVistaar India, home tutor, online tutor, tuition, teacher registration, find tutor, private tutor">
+
+  <meta name="robots" content="index, follow">
 
   <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
-    header{background:#1769e0;color:white;text-align:center;padding:28px 15px}
-    header h1{margin:0;font-size:32px}
-    header p{margin:8px 0 0;font-size:16px}
-    .container{max-width:850px;margin:25px auto;padding:0 15px}
-    .card{background:white;padding:24px;margin-bottom:20px;border-radius:16px;box-shadow:0 4px 18px #00000012}
-    h2{margin-top:0;color:#1769e0}
-    input,select,textarea{width:100%;padding:13px;margin:7px 0 12px;border:1px solid #d5dce8;border-radius:9px;font-size:15px}
-    textarea{min-height:90px;resize:vertical}
-    button{width:100%;padding:14px;border:0;border-radius:9px;background:#20b858;color:white;font-size:16px;font-weight:bold;cursor:pointer}
-    .teacher button{background:#1769e0}
-    footer{text-align:center;padding:25px;color:#687386;font-size:14px}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1769e0, #4b2bd8);
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 17px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 25px 15px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .intro h2 {
+      color: #1769e0;
+      margin-bottom: 8px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .feature {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px #00000012;
+    }
+
+    .feature div {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      margin-bottom: 22px;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px #00000012;
+    }
+
+    .card h2 {
+      color: #1769e0;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      margin-bottom: 15px;
+      color: #596579;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      margin: 6px 0 12px;
+      border: 1px solid #d5dce8;
+      border-radius: 9px;
+      font-size: 15px;
+      background: white;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 9px;
+      background: #20b858;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .teacher button {
+      background: #1769e0;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 20px;
+      background: #20b858;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      background: #172033;
+      color: white;
+      font-size: 14px;
+    }
+
+    @media (max-width: 650px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
@@ -34,46 +179,146 @@
 
 <div class="container">
 
-  <div class="card">
-    <h2>📚 Find a Tutor</h2>
-    <p>Apni tuition requirement bhariye. Details WhatsApp par bheji jayengi.</p>
-
-    <form id="studentForm">
-      <input name="Student Name" placeholder="Student Name" required>
-      <input name="Parent Name" placeholder="Parent Name">
-      <input name="Class" placeholder="Class / Grade" required>
-      <input name="Subject" placeholder="Subject Required" required>
-      <input name="Location" placeholder="City / Area" required>
-      <select name="Mode">
-        <option value="">Select Teaching Mode</option>
-        <option>Offline</option>
-        <option>Online</option>
-        <option>Both</option>
-      </select>
-      <textarea name="Requirement" placeholder="Tell us about your requirement"></textarea>
-      <button type="submit">📲 Send Student Requirement</button>
-    </form>
+  <div class="intro">
+    <h2>Learn Better. Teach Better.</h2>
+    <p>Apni tuition requirement submit karein ya teaching opportunity ke liye register karein.</p>
   </div>
 
-  <div class="card teacher">
-    <h2>👨‍🏫 Teacher Registration</h2>
-    <p>Teaching opportunity ke liye apni basic details submit karein.</p>
+  <div class="features">
+    <div class="feature">
+      <div>📚</div>
+      <h3>Find a Tutor</h3>
+      <p>Apni learning requirement bhejiye.</p>
+    </div>
 
-    <form id="teacherForm">
-      <input name="Teacher Name" placeholder="Full Name" required>
-      <input name="Qualification" placeholder="Qualification" required>
-      <input name="Subjects" placeholder="Subjects You Teach" required>
-      <input name="Experience" placeholder="Teaching Experience">
-      <input name="Location" placeholder="City / Area" required>
+    <div class="feature">
+      <div>👨‍🏫</div>
+      <h3>Join as Teacher</h3>
+      <p>Teaching opportunity ke liye register karein.</p>
+    </div>
+
+    <div class="feature">
+      <div>📱</div>
+      <h3>Easy Contact</h3>
+      <p>Details WhatsApp ke through submit karein.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📚 Find a Tutor</h2>
+    <p>Student ya parent apni tuition requirement yahan submit karein.</p>
+
+    <form id="studentForm">
+
+      <input
+        name="Student Name"
+        placeholder="Student Name"
+        required
+      >
+
+      <input
+        name="Parent Name"
+        placeholder="Parent Name"
+      >
+
+      <input
+        name="Class"
+        placeholder="Class / Grade"
+        required
+      >
+
+      <input
+        name="Subject"
+        placeholder="Subject Required"
+        required
+      >
+
+      <input
+        name="Location"
+        placeholder="City / Area"
+        required
+      >
+
       <select name="Mode">
         <option value="">Preferred Teaching Mode</option>
         <option>Offline</option>
         <option>Online</option>
         <option>Both</option>
       </select>
-      <textarea name="About" placeholder="Tell us about yourself"></textarea>
-      <button type="submit">📲 Register as Teacher</button>
+
+      <textarea
+        name="Requirement"
+        placeholder="Tell us about your tuition requirement"
+      ></textarea>
+
+      <button type="submit">
+        📲 Send Student Requirement
+      </button>
+
     </form>
+  </div>
+
+  <div class="card teacher">
+    <h2>👨‍🏫 Teacher Registration</h2>
+    <p>Teacher apni basic details submit karke registration kar sakte hain.</p>
+
+    <form id="teacherForm">
+
+      <input
+        name="Teacher Name"
+        placeholder="Full Name"
+        required
+      >
+
+      <input
+        name="Qualification"
+        placeholder="Qualification"
+        required
+      >
+
+      <input
+        name="Subjects"
+        placeholder="Subjects You Teach"
+        required
+      >
+
+      <input
+        name="Experience"
+        placeholder="Teaching Experience"
+      >
+
+      <input
+        name="Location"
+        placeholder="City / Area"
+        required
+      >
+
+      <select name="Mode">
+        <option value="">Preferred Teaching Mode</option>
+        <option>Offline</option>
+        <option>Online</option>
+        <option>Both</option>
+      </select>
+
+      <textarea
+        name="About"
+        placeholder="Tell us about yourself"
+      ></textarea>
+
+      <button type="submit">
+        📲 Register as Teacher
+      </button>
+
+    </form>
+  </div>
+
+  <div class="card contact">
+    <h2>📞 Contact TutorVistaar-India</h2>
+    <p>For general enquiries, contact us through WhatsApp.</p>
+
+    <a href="https://wa.me/919336871629" target="_blank">
+      💬 Contact on WhatsApp
+    </a>
   </div>
 
 </div>
@@ -83,30 +328,50 @@
 </footer>
 
 <script>
-const whatsappNumber = "919336871629";
+  const whatsappNumber = "919336871629";
 
-function sendToWhatsApp(formId, title) {
-  const form = document.getElementById(formId);
+  function sendToWhatsApp(formId, title) {
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
+    const form = document.getElementById(formId);
 
-    const data = new FormData(form);
-    let message = `*${title}*%0A%0A`;
+    form.addEventListener("submit", function(e) {
 
-    for (const [key, value] of data.entries()) {
-      if (String(value).trim() !== "") {
-        message += `*${key}:* ${value}%0A`;
+      e.preventDefault();
+
+      const data = new FormData(form);
+
+      let message = `*${title}*%0A%0A`;
+
+      for (const [key, value] of data.entries()) {
+
+        if (String(value).trim() !== "") {
+
+          message +=
+            `*${key}:* ${encodeURIComponent(value)}%0A`;
+
+        }
+
       }
-    }
 
-    const url = "https://wa.me/" + whatsappNumber + "?text=" + message;
-    window.open(url, "_blank");
-  });
-}
+      const url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        message;
 
-sendToWhatsApp("studentForm", "TutorVistaar - New Student Requirement");
-sendToWhatsApp("teacherForm", "TutorVistaar - New Teacher Registration");
+      window.open(url, "_blank");
+    });
+  }
+
+  sendToWhatsApp(
+    "studentForm",
+    "TutorVistaar - New Student Requirement"
+  );
+
+  sendToWhatsApp(
+    "teacherForm",
+    "TutorVistaar - New Teacher Registration"
+  );
 </script>
 
 </body>
