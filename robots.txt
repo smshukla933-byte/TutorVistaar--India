@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://smshukla933-byte.github.io/TutorVistaar--India/sitemap.xml
