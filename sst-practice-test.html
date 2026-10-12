@@ -1,0 +1,95 @@
+
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Class 10 SST Test | TutorVistaar</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f2f6fa;color:#222;margin:0;padding:16px}
+header{background:#155e75;color:white;text-align:center;padding:20px;border-radius:14px}
+main{max-width:700px;margin:20px auto}
+.card{background:white;padding:20px;border-radius:14px;margin:15px 0;box-shadow:0 2px 8px #ddd}
+button{background:#155e75;color:white;border:0;border-radius:8px;padding:12px 18px;font-size:16px;margin-top:12px;cursor:pointer}
+.option{display:block;padding:12px;border:1px solid #ddd;border-radius:8px;margin:9px 0}
+#feedback{background:#e6f7ee;padding:12px;border-radius:8px;margin-top:12px}
+a{color:#155e75;margin-right:12px}
+</style>
+</head>
+<body>
+<header>
+<h1>🌍 Class 10 SST Practice Test</h1>
+<p>TutorVistaar India | UP Board Revision</p>
+</header>
+<main>
+<div class="card">
+<p>10 MCQ solve karo. Har jawab ke baad explanation milega.</p>
+<p id="progress">Question 1 / 10</p>
+</div>
+<div class="card" id="quiz">
+<h3 id="question"></h3>
+<div id="options"></div>
+<div id="feedback" hidden></div>
+<button id="check" onclick="checkAnswer()">Answer Check Karo</button>
+<button id="next" onclick="nextQuestion()" hidden>Agla Question →</button>
+</div>
+<div class="card" id="result" hidden>
+<h2>Test Complete! 🎉</h2>
+<h3 id="score"></h3>
+<div id="review"></div>
+<button onclick="restart()">Dobara Test Do</button>
+</div>
+<div class="card">
+<a href="index.html">Homepage</a>
+<a href="maths-practice-test.html">Maths Test</a>
+<a href="science-practice-test.html">Science Test</a>
+</div>
+</main>
+<script>
+const data=[
+{q:"फ्रांसीसी क्रांति ने किन विचारों को फैलाया?",o:["स्वतंत्रता, समानता और बंधुत्व","सामंतवाद","उपनिवेशवाद","तानाशाही"],a:0,e:"फ्रांसीसी क्रांति ने स्वतंत्रता, समानता और बंधुत्व के विचार फैलाए।"},
+{q:"भारत में असहयोग आंदोलन कब शुरू हुआ?",o:["1915","1920","1930","1942"],a:1,e:"असहयोग आंदोलन 1920 में शुरू हुआ।"},
+{q:"काली मिट्टी किस फसल के लिए उपयुक्त है?",o:["चाय","कपास","जूट","कॉफी"],a:1,e:"काली मिट्टी नमी रोकती है और कपास के लिए उपयुक्त है।"},
+{q:"भारत में अधिकांश वर्षा किस मानसून से होती है?",o:["उत्तर-पूर्वी","दक्षिण-पश्चिमी","स्थानीय हवाएँ","पश्चिमी विक्षोभ"],a:1,e:"भारत में अधिकांश वर्षा दक्षिण-पश्चिमी मानसून से होती है।"},
+{q:"लोकतंत्र में सत्ता का मुख्य स्रोत कौन है?",o:["सेना","जनता","अधिकारी","व्यापारी"],a:1,e:"लोकतंत्र में जनता अपने प्रतिनिधियों को चुनती है।"},
+{q:"केंद्र और राज्य के बीच सत्ता का बँटवारा किसकी विशेषता है?",o:["राजतंत्र","संघवाद","तानाशाही","उपनिवेशवाद"],a:1,e:"संघवाद में केंद्र और राज्य के बीच संवैधानिक सत्ता-विभाजन होता है।"},
+{q:"GDP का अर्थ क्या है?",o:["देश में उत्पादित अंतिम वस्तुओं और सेवाओं का कुल मूल्य","केवल कृषि उत्पादन","सरकारी कर्ज","केवल निर्यात"],a:0,e:"GDP एक निश्चित अवधि में देश के भीतर उत्पादित अंतिम वस्तुओं और सेवाओं का कुल मूल्य है।"},
+{q:"बैंक में जमा धन पर सामान्यतः क्या मिल सकता है?",o:["ब्याज","जुर्माना","वेतन","इनमें से कोई नहीं"],a:0,e:"बैंक जमा पर नियमों के अनुसार ब्याज दे सकता है।"},
+{q:"सतत विकास का उद्देश्य क्या है?",o:["संसाधन खत्म करना","वर्तमान और भविष्य दोनों की जरूरतों का ध्यान रखना","केवल उद्योग बढ़ाना","केवल शहरों का विकास"],a:1,e:"सतत विकास वर्तमान जरूरतें पूरी करते हुए भविष्य की पीढ़ियों का ध्यान रखता है।"},
+{q:"भारत में लोकसभा चुनाव कौन कराता है?",o:["UPSC","निर्वाचन आयोग","वित्त आयोग","नीति आयोग"],a:1,e:"भारत का निर्वाचन आयोग लोकसभा चुनावों का संचालन करता है।"}
+];
+let i=0,score=0,answered=false,wrong=[];
+function render(){
+ answered=false;
+ document.getElementById("progress").textContent="Question "+(i+1)+" / "+data.length;
+ document.getElementById("question").textContent=(i+1)+". "+data[i].q;
+ document.getElementById("options").innerHTML=data[i].o.map((v,j)=>'<label class="option"><input type="radio" name="ans" value="'+j+'"> '+String.fromCharCode(65+j)+'. '+v+'</label>').join("");
+ document.getElementById("feedback").hidden=true;
+ document.getElementById("check").hidden=false;
+ document.getElementById("next").hidden=true;
+}
+function checkAnswer(){
+ if(answered)return;
+ let s=document.querySelector('input[name="ans"]:checked');
+ if(!s){alert("Bhai, pehle ek option chuno.");return}
+ answered=true;
+ let chosen=Number(s.value),q=data[i],correct=chosen===q.a;
+ if(correct)score++;else wrong.push(i);
+ let f=document.getElementById("feedback");
+ f.innerHTML=(correct?"✅ Sahi jawab!":"❌ Sahi jawab: "+String.fromCharCode(65+q.a)+". "+q.o[q.a])+"<br>"+q.e;
+ f.hidden=false;document.getElementById("check").hidden=true;
+ document.getElementById("next").hidden=false;
+ document.getElementById("next").textContent=i===data.length-1?"Result Dekho":"Agla Question →";
+}
+function nextQuestion(){
+ if(i<data.length-1){i++;render();return}
+ document.getElementById("quiz").hidden=true;
+ document.getElementById("result").hidden=false;
+ document.getElementById("score").textContent="Tumhara score: "+score+" / "+data.length;
+ document.getElementById("review").innerHTML="<h3>Revision</h3>"+data.map((q,j)=>"<p><b>"+(j+1)+". "+q.o[q.a]+"</b><br>"+q.e+"</p>").join("");
+}
+function restart(){i=0;score=0;wrong=[];document.getElementById("result").hidden=true;document.getElementById("quiz").hidden=false;render()}
+render();
+</script>
+</body>
+</html>
