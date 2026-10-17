@@ -1,439 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
- <title>TutorVistaar Sahjanwa - Home Tuition in Sahjanwa, Gorakhpur | Class 1-12</title>
-
-<meta name="description" content="TutorVistaar Sahjanwa - No.1 Home Tuition in Sahjanwa, Gorakhpur for Nursery to Class 12, CBSE, ICSE. Best tutors for Maths, Science, English. Call now!">
-
-<meta name="robots" content="index, follow">
-<!-- Fix Google Site Name -->
-<meta property="og:site_name" content="TutorVistaar Sahjanwa">
-<meta property="og:title" content="Home Tuition in Sahjanwa, Gorakhpur | TutorVistaar Sahjanwa">
-<meta name="author" content="TutorVistaar Sahjanwa">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "TutorVistaar India",
-  "url": "https://smshukla933-byte.github.io/TutorVistaar--India/"
-}
-</script>
-<!-- End Fix -->
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #172033;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(135deg, #1769e0, #4b2bd8);
-      color: white;
-      text-align: center;
-      padding: 45px 20px;
-    }
-
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 17px;
-      max-width: 650px;
-      margin: auto;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 25px 15px;
-    }
-
-    .intro {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .intro h2 {
-      color: #1769e0;
-      margin-bottom: 8px;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin-bottom: 25px;
-    }
-
-    .feature {
-      background: white;
-      padding: 20px;
-      text-align: center;
-      border-radius: 14px;
-      box-shadow: 0 4px 15px #00000012;
-    }
-
-    .feature div {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      margin-bottom: 22px;
-      border-radius: 16px;
-      box-shadow: 0 4px 18px #00000012;
-    }
-
-    .card h2 {
-      color: #1769e0;
-      margin-bottom: 5px;
-    }
-
-    .card p {
-      margin-bottom: 15px;
-      color: #596579;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 13px;
-      margin: 6px 0 12px;
-      border: 1px solid #d5dce8;
-      border-radius: 9px;
-      font-size: 15px;
-      background: white;
-    }
-
-    textarea {
-      min-height: 90px;
-      resize: vertical;
-    }
-
-    button {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 9px;
-      background: #20b858;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    button:hover {
-      opacity: 0.9;
-    }
-
-    .teacher button {
-      background: #1769e0;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 20px;
-      background: #20b858;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px 15px;
-      background: #172033;
-      color: white;
-      font-size: 14px;
-    }
-
-    @media (max-width: 650px) {
-      header h1 {
-        font-size: 28px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutor Vistaar Sahjanwa</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family: sans-serif; }
+body { background:#f5f6fb; }
+.header { background:#fff; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; }
+.logo-box { display:flex; align-items:center; gap:8px; }
+.logo-box img { width:38px; height:38px; }
+.logo-box b { color:#1a237e; font-size:17px; line-height:15px; }
+.banner { background:linear-gradient(90deg,#ff8c2a,#2f5bff); margin:12px; border-radius:18px; padding:25px; text-align:center; color:#fff; }
+.banner h1 { font-size:24px; font-weight:800; }
+.cards { display:flex; gap:12px; padding:16px; }
+.card { flex:1; border-radius:18px; padding:20px 12px; text-align:center; color:#fff; }
+.blue { background:#0d5bff; }
+.orange { background:#ff6a00; }
+.card h2 { font-size:18px; margin-top:8px; }
+.card p { font-size:12px; margin-top:6px; }
+.bottom { position:fixed; bottom:0; left:0; right:0; background:#fff; display:flex; justify-content:space-around; padding:12px; border-radius:20px 20px 0 0; max-width:500px; margin:auto; }
+.bottom a { text-decoration:none; color:#333; font-size:12px; font-weight:700; }
+</style>
 </head>
-
 <body>
-
-<header>
-  <h1>TutorVistaar India – Home Tuition & Online Tutors</h1>
-  <p>TutorVistaar India helps parents find home tutors and online classes for Nursery to Class 12. Explore tutoring options for CBSE, ICSE and UP Board, and connect with teachers across India.</p>
-</header>
-
-<div class="container">
-
-  <div class="intro">
-    <h2>Learn Better. Teach Better.</h2>
-    <p>Apni tuition requirement submit karein ya teaching opportunity ke liye register karein.</p>
-  </div>
-  
-  <section>
-    <h2>Home Tuition in Gorakhpur for Classes 1–10</h2>
-    <p>
-      TutorVistaar India helps parents explore home tuition
-      and online tuition options for students in Classes 1 to 10
-      in Gorakhpur, Uttar Pradesh.
-    </p>
-    <p>
-      Parents can submit their tuition requirements, and teachers
-      can register to explore teaching opportunities.
-    </p>
-    <p>
-      We aim to help families find suitable tutors for school
-      subjects and online learning.
-    </p>
-  </section>
-
-  <div class="features">
-    <div class="feature">
-      <div>📚</div>
-      <h3>Find a Tutor</h3>
-      <p>Apni learning requirement bhejiye.</p>
-    </div>
-
-    <div class="feature">
-      <div>👨‍🏫</div>
-      <h3>Join as Teacher</h3>
-      <p>Teaching opportunity ke liye register karein.</p>
-    </div>
-
-    <div class="feature">
-      <div>📱</div>
-      <h3>Easy Contact</h3>
-      <p>Details WhatsApp ke through submit karein.</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>📚 Find a Tutor</h2>
-    <p>Student ya parent apni tuition requirement yahan submit karein.</p>
-
-    <form id="studentForm">
-
-      <input
-        name="Student Name"
-        placeholder="Student Name"
-        required
-      >
-
-      <input
-        name="Parent Name"
-        placeholder="Parent Name"
-      >
-
-      <input
-        name="Class"
-        placeholder="Class / Grade"
-        required
-      >
-
-      <input
-        name="Subject"
-        placeholder="Subject Required"
-        required
-      >
-
-      <input
-        name="Location"
-        placeholder="City / Area"
-        required
-      >
-
-      <select name="Mode">
-        <option value="">Preferred Teaching Mode</option>
-        <option>Offline</option>
-        <option>Online</option>
-        <option>Both</option>
-      </select>
-
-      <textarea
-        name="Requirement"
-        placeholder="Tell us about your tuition requirement"
-      ></textarea>
-
-      <button type="submit">
-        📲 Send Student Requirement
-      </button>
-
-    </form>
-  </div>
-
-  <div class="card teacher">
-    <h2>👨‍🏫 Teacher Registration</h2>
-    <p>Teacher apni basic details submit karke registration kar sakte hain.</p>
-
-    <form id="teacherForm">
-
-      <input
-        name="Teacher Name"
-        placeholder="Full Name"
-        required
-      >
-
-      <input
-        name="Qualification"
-        placeholder="Qualification"
-        required
-      >
-
-      <input
-        name="Subjects"
-        placeholder="Subjects You Teach"
-        required
-      >
-
-      <input
-        name="Experience"
-        placeholder="Teaching Experience"
-      >
-
-      <input
-        name="Location"
-        placeholder="City / Area"
-        required
-      >
-
-      <select name="Mode">
-        <option value="">Preferred Teaching Mode</option>
-        <option>Offline</option>
-        <option>Online</option>
-        <option>Both</option>
-      </select>
-
-      <textarea
-        name="About"
-        placeholder="Tell us about yourself"
-      ></textarea>
-
-      <button type="submit">
-        📲 Register as Teacher
-      </button>
-
-    </form>
-  </div>
-
-  <div class="card contact">
-    <h2>📞 Contact TutorVistaar-India</h2>
-    <p>For general enquiries, contact us through WhatsApp.</p>
-
-    <a href="https://wa.me/919336871629" target="_blank">
-      💬 Contact on WhatsApp
-    </a>
-  </div>
-
+<div class="header">
+<div class="logo-box">
+<img src="logo.png">
+<b>Tutor Vistaar<br><span style="font-size:11px; color:#666; font-weight:400;">Sahjanwa</span></b>
 </div>
-<p>
-  <a href="home-tuition-gorakhpur.html">
-    Home Tuition in Gorakhpur – Classes 1–10
-  </a>
-</p>
-<footer>
-  © 2026 TutorVistaar-India | Connecting Students & Teachers
-</footer>
+<div>☰</div>
+</div>
 
-<script>
-  const whatsappNumber = "919336871629";
+<div class="banner">
+<h1>Home Tuition in<br>Sahjanwa Gorakhpur</h1>
+<p style="margin-top:8px; font-size:12px;">Quality home tutoring • Experienced teachers</p>
+</div>
 
-  function sendToWhatsApp(formId, title) {
+<div style="text-align:center; padding:10px;">
+<h2 style="color:#0d1250;">Learn Better • Teach Better</h2>
+<p style="font-size:12px; color:#666; margin-top:5px;">Get expert tutors at home or teach and earn</p>
+</div>
 
-    const form = document.getElementById(formId);
+<div class="cards">
+<div class="card blue">
+<div style="font-size:28px;">🔍</div>
+<h2>Find a Tutor</h2>
+<p>Hire verified tutors for Maths, Science, English</p>
+</div>
+<div class="card orange">
+<div style="font-size:28px;">🎓</div>
+<h2>Become a Tutor</h2>
+<p>Join as a tutor & start teaching nearby</p>
+</div>
+</div>
 
-    form.addEventListener("submit", function(e) {
+<div style="height:80px;"></div>
 
-      e.preventDefault();
-
-      const data = new FormData(form);
-
-      let message = `*${title}*%0A%0A`;
-
-      for (const [key, value] of data.entries()) {
-
-        if (String(value).trim() !== "") {
-
-          message +=
-            `*${key}:* ${encodeURIComponent(value)}%0A`;
-
-        }
-
-      }
-
-      const url =
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        message;
-
-      window.open(url, "_blank");
-    });
-  }
-
-  sendToWhatsApp(
-    "studentForm",
-    "TutorVistaar - New Student Requirement"
-  );
-
-  sendToWhatsApp(
-    "teacherForm",
-    "TutorVistaar - New Teacher Registration"
-  );
-</script>
-<section style="max-width:700px;margin:25px auto;padding:24px;text-align:center;background:#eef4ff;border-radius:16px;">
-  <h2>🧮 Free Maths Practice Test</h2>
-  <p>Class 10 ke Maths MCQs solve karo, apna score dekho aur solutions samjho.</p>
-  <a href="maths-practice-test.html" style="display:inline-block;background:#2457d6;color:white;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:bold;">Test Abhi Do →</a>
-</section>
-  
-<section style="max-width:700px;margin:25px auto;padding:24px;text-align:center;background:#eaf8f0;border-radius:16px;">
-  <h2>🔬 Free Science Practice Test</h2>
-  <p>Class 10 Science ke MCQs solve karo, explanations samjho aur apna score dekho.</p>
-  <a href="science-practice-test.html" style="display:inline-block;background:#16803d;color:white;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:bold;">Science Test Abhi Do →</a>
-</section>
-
-<section style="max-width:700px;margin:25px auto;padding:24px;text-align:center;background:#e8f4ff;border-radius:16px;">
-  <h2>🌍 Free SST Practice Test</h2>
-  <p>Class 10 SST ke MCQs solve karo, explanations samjho aur apna score dekho.</p>
-  <a href="sst-practice-test.html" style="display:inline-block;background:#155e75;color:white;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:bold;">SST Test Abhi Do →</a>
-</section>
-
-<section style="max-width:700px;margin:25px auto;padding:24px;text-align:center;background:#fff0f6;border-radius:20px;">
-  <h2>📚 Free Hindi Practice Test</h2>
-  <p>Class 10 Hindi ke MCQs solve karo, explanations samjho aur apna score dekho.</p>
-  <a href="hindi-practice-test.html" style="display:inline-block;background:#9b287b;color:white;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:bold;">Hindi Test Abhi Do →</a>
-</section>
-
-<section style="max-width:700px;margin:25px auto;padding:24px;text-align:center;background:#fff4e5;border-radius:20px;">
-  <h2>📘 Free English Practice Test</h2>
-  <p>Class 10 English ke MCQs solve karo, explanations samjho aur apna score dekho.</p>
-  <a href="english-practice-test.html" style="display:inline-block;background:#d97706;color:white;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:bold;">English Test Abhi Do →</a>
-</section>
+<div class="bottom">
+<a href="#">🏠 Home</a>
+<a href="#">🔍 Find</a>
+<a href="https://wa.me/919580712072">💬 WhatsApp</a>
+<a href="tel:+919580712072">📞 Call</a>
+</div>
 
 </body>
 </html>
