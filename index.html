@@ -1,68 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tutor Vistaar Sahjanwa</title>
+<title>Tutor Vistaar Sahjanwa - Home Tuition</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family: sans-serif; }
-body { background:#f5f6fb; }
-.header { background:#fff; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; }
-.logo-box { display:flex; align-items:center; gap:8px; }
-.logo-box img { width:38px; height:38px; }
-.logo-box b { color:#1a237e; font-size:17px; line-height:15px; }
-.banner { background:linear-gradient(90deg,#ff8c2a,#2f5bff); margin:12px; border-radius:18px; padding:25px; text-align:center; color:#fff; }
-.banner h1 { font-size:24px; font-weight:800; }
-.cards { display:flex; gap:12px; padding:16px; }
-.card { flex:1; border-radius:18px; padding:20px 12px; text-align:center; color:#fff; }
-.blue { background:#0d5bff; }
-.orange { background:#ff6a00; }
-.card h2 { font-size:18px; margin-top:8px; }
-.card p { font-size:12px; margin-top:6px; }
-.bottom { position:fixed; bottom:0; left:0; right:0; background:#fff; display:flex; justify-content:space-around; padding:12px; border-radius:20px 20px 0 0; max-width:500px; margin:auto; }
-.bottom a { text-decoration:none; color:#333; font-size:12px; font-weight:700; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+body{background:#f8fbff;}
+.header{display:flex;justify-content:space-between;align-items:center;padding:12px 15px;background:white;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+.logo{display:flex;align-items:center;gap:8px;}
+.logo img{width:40px;height:40px;border-radius:8px;}
+.logo-text b{display:block;font-size:18px;color:#0a1931;}
+.logo-text span{font-size:13px;color:gray;}
+.hero{margin:12px;background:linear-gradient(90deg,#ff8a00,#2b5bff);color:white;padding:20px;text-align:center;border-radius:20px;}
+.hero h1{font-size:22px;line-height:1.3;}
+.hero p{font-size:13px;margin-top:8px;opacity:0.95;}
+.main-title{text-align:center;padding:20px 10px 10px;}
+.main-title h2{font-size:22px;color:#0a1931;}
+.main-title p{font-size:13px;color:gray;margin-top:5px;}
+.cards{display:flex;gap:12px;padding:12px;}
+.card{flex:1;padding:20px 10px;border-radius:20px;text-align:center;color:white;cursor:pointer;text-decoration:none;display:block;}
+.card-blue{background:#1877ff;}
+.card-orange{background:#ff7b00;}
+.card h3{margin:10px 0 5px;font-size:16px;}
+.card p{font-size:12px;line-height:1.3;}
+.form-section{margin:15px 12px;background:white;padding:18px;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,0.08);display:none;}
+.form-section.active{display:block;animation:fade 0.3s;}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.form-section h3{color:#0a1931;margin-bottom:10px;}
+.form-section input{width:100%;padding:12px;margin:7px 0;border:1px solid #ddd;border-radius:10px;font-size:14px;}
+.form-section button{width:100%;padding:13px;background:#1877ff;color:white;border:none;border-radius:10px;font-size:16px;margin-top:10px;font-weight:bold;}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:white;display:flex;justify-content:space-around;padding:10px 0 15px;box-shadow:0 -2px 10px rgba(0,0,0,0.1);z-index:99;}
+.bottom-nav a{text-decoration:none;color:#333;font-size:12px;text-align:center;}
 </style>
 </head>
 <body>
+
 <div class="header">
-<div class="logo-box">
-<img src="logo.png">
-<b>Tutor Vistaar<br><span style="font-size:11px; color:#666; font-weight:400;">Sahjanwa</span></b>
+<div class="logo">
+<img src="logo.png" onerror="this.src='https://via.placeholder.com/40/1877ff/fff?text=TV'">
+<div class="logo-text"><b>Tutor Vistaar</b><span>Sahjanwa</span></div>
 </div>
-<div>☰</div>
+<div style="font-size:12px;color:#1877ff;font-weight:bold;">📞 9580712072</div>
 </div>
 
-<div class="banner">
+<div class="hero">
 <h1>Home Tuition in<br>Sahjanwa Gorakhpur</h1>
-<p style="margin-top:8px; font-size:12px;">Quality home tutoring • Experienced teachers</p>
+<p>Quality home tutoring • Experienced teachers</p>
 </div>
 
-<div style="text-align:center; padding:10px;">
-<h2 style="color:#0d1250;">Learn Better • Teach Better</h2>
-<p style="font-size:12px; color:#666; margin-top:5px;">Get expert tutors at home or teach and earn</p>
+<div class="main-title">
+<h2>Learn Better • Teach Better</h2>
+<p>Get expert tutors at home or teach and earn</p>
 </div>
 
 <div class="cards">
-<div class="card blue">
-<div style="font-size:28px;">🔍</div>
-<h2>Find a Tutor</h2>
-<p>Hire verified tutors for Maths, Science, English</p>
-</div>
-<div class="card orange">
-<div style="font-size:28px;">🎓</div>
-<h2>Become a Tutor</h2>
-<p>Join as a tutor & start teaching nearby</p>
-</div>
+<a class="card card-blue" onclick="showForm('find')">
+<div style="font-size:28px">🔍</div>
+<h3>Find a Tutor</h3>
+<p>Hire verified tutors</p>
+</a>
+<a class="card card-orange" onclick="showForm('become')">
+<div style="font-size:28px">🎓</div>
+<h3>Become a Tutor</h3>
+<p>Join as a tutor & earn</p>
+</a>
 </div>
 
-<div style="height:80px;"></div>
-
-<div class="bottom">
-<a href="#">🏠 Home</a>
-<a href="#">🔍 Find</a>
-<a href="https://wa.me/919580712072">💬 WhatsApp</a>
-<a href="tel:+919580712072">📞 Call</a>
+<div id="findForm" class="form-section">
+<h3>Find a Tutor Form</h3>
+<input type="text" id="f1" placeholder="Student Name">
+<input type="text" id="f2" placeholder="Class">
+<input type="text" id="f3" placeholder="Subject">
+<input type="text" id="f4" placeholder="Your Mobile Number">
+<button onclick="sendWA('find')">Send on WhatsApp</button>
 </div>
+
+<div id="becomeForm" class="form-section">
+<h3>Become a Tutor Form</h3>
+<input type="text" id="b1" placeholder="Your Full Name">
+<input type="text" id="b2" placeholder="Qualification">
+<input type="text" id="b3" placeholder="Subjects You Teach">
+<input type="text" id="b4" placeholder="Your Mobile Number">
+<button onclick="sendWA('become')">Join as Tutor</button>
+</div>
+
+<div style="height:100px"></div>
+
+<div class="bottom-nav">
+<a href="#">🏠<br>Home</a>
+<a onclick="showForm('find')">🔍<br>Find</a>
+<a href="https://wa.me/919580712072">💬<br>WhatsApp</a>
+<a href="tel:+919580712072">📞<br>Call</a>
+</div>
+
+<script>
+function showForm(type){
+document.getElementById('findForm').classList.remove('active');
+document.getElementById('becomeForm').classList.remove('active');
+if(type=='find') document.getElementById('findForm').classList.add('active');
+else document.getElementById('becomeForm').classList.add('active');
+window.scrollTo({top:280,behavior:'smooth'});
+}
+function sendWA(type){
+let msg="";
+if(type=='find'){
+let n=document.getElementById('f1').value, c=document.getElementById('f2').value, s=document.getElementById('f3').value, m=document.getElementById('f4').value;
+msg=`Hello Tutor Vistaar, I want a tutor%0AName: ${n}%0AClass: ${c}%0ASubject: ${s}%0AMobile: ${m}`;
+}else{
+let n=document.getElementById('b1').value, c=document.getElementById('b2').value, s=document.getElementById('b3').value, m=document.getElementById('b4').value;
+msg=`Hello Tutor Vistaar, I want to become a tutor%0AName: ${n}%0AQualification: ${c}%0ASubjects: ${s}%0AMobile: ${m}`;
+}
+window.open("https://wa.me/919580712072?text="+msg,"_blank");
+}
+</script>
 
 </body>
 </html>
